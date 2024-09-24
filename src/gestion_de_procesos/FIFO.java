@@ -6,8 +6,13 @@ import java.util.Map;
 
 public class FIFO {
     public static void main(String[] args) {
-        CrearProcesos();
-        ArrayList<Proceso> procesos = null;
+        ArrayList<Proceso> procesos = new ArrayList<>();
+        procesos.add(new Proceso(1,30));
+        procesos.add(new Proceso(2,25));
+        procesos.add(new Proceso(3,40));
+        procesos.add(new Proceso(4,50));
+        procesos.add(new Proceso(5,20));
+        procesos.add(new Proceso(6,30));
 
         while (!procesos.isEmpty()) {
             Proceso proceso = procesos.getFirst();
@@ -22,15 +27,6 @@ public class FIFO {
 
     }
 
-    static void CrearProcesos() {
-        ArrayList<Proceso> procesos = new ArrayList<>();
-        procesos.add(new Proceso(1,30));
-        procesos.add(new Proceso(2,25));
-        procesos.add(new Proceso(3,40));
-        procesos.add(new Proceso(4,50));
-        procesos.add(new Proceso(5,20));
-        procesos.add(new Proceso(6,30));
-    }
 
 
 }
