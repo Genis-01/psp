@@ -1,8 +1,8 @@
-package gestion_de_procesos;
+package actividades.gestion_de_procesos;
 
 import java.util.ArrayList;
 
-public class RoundRobin {
+public class pmpa {
     public static void main(String[] args) {
 
 
@@ -14,19 +14,19 @@ public class RoundRobin {
         procesos.add(new Proceso(5,20));
         procesos.add(new Proceso(6,30));
 
-        System.out.println("empiezo");
+        procesos.sort(Proceso::compareTiempoRestante);
+
+
         while (!procesos.isEmpty()) {
             Proceso proceso = procesos.getFirst();
-            procesos.remove(0);
-            System.out.println(proceso.toString() + "-5=" + (proceso.tiempoRestante-5));
+            System.out.println(proceso.toString() + "-5 =" + (proceso.tiempoRestante-5));
             proceso.tiempoRestante-=5;
-            if (proceso.tiempoRestante>=0) {
-                procesos.add(proceso);
+            if (!(proceso.tiempoRestante>0)) {
+                procesos.remove(0);;
             }
+            procesos.sort(Proceso::compareTiempoRestante);
 
         }
-
-
 
 
         System.out.println("acabe");

@@ -1,11 +1,11 @@
-package gestion_de_procesos;
+package actividades.gestion_de_procesos;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-public class FIFO {
+public class pmp {
     public static void main(String[] args) {
+
+
         ArrayList<Proceso> procesos = new ArrayList<>();
         procesos.add(new Proceso(1,30));
         procesos.add(new Proceso(2,25));
@@ -14,9 +14,12 @@ public class FIFO {
         procesos.add(new Proceso(5,20));
         procesos.add(new Proceso(6,30));
 
+        procesos.sort(Proceso::compareDuracion);
+
+
         while (!procesos.isEmpty()) {
             Proceso proceso = procesos.getFirst();
-            System.out.println(proceso.toString() + "-5=" + (proceso.tiempoRestante-5));
+            System.out.println(proceso.toString() + "-5 =" + (proceso.tiempoRestante-5));
             proceso.tiempoRestante-=5;
             if (!(proceso.tiempoRestante>0)) {
                 procesos.remove(0);;
@@ -25,8 +28,8 @@ public class FIFO {
         }
 
 
+        System.out.println("acabe");
+
+
     }
-
-
-
 }

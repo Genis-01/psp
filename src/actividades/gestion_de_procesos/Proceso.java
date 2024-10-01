@@ -1,4 +1,4 @@
-package gestion_de_procesos;
+package actividades.gestion_de_procesos;
 
 public class Proceso implements Comparable<Proceso> {
     Integer idProceso;
@@ -26,6 +26,8 @@ public class Proceso implements Comparable<Proceso> {
     public int compareDuracion(Proceso o) {
         return duracion - o.duracion;
     }
+
+    public int compareTiempoRestante(Proceso o) { return tiempoRestante - o.tiempoRestante; }
 
     @Override
     public String toString() {

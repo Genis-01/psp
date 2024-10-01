@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SerPros.iml" filepath="$PROJECT_DIR$/SerPros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psp.iml" filepath="$PROJECT_DIR$/psp.iml" />
     </modules>
   </component>
 </project>
