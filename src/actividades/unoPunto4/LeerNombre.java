@@ -1,7 +1,7 @@
 package actividades.unoPunto4;
 
 import java.util.Scanner;
-import java.util.function.Function;
+
 
 public class LeerNombre {
     public static void main(String[] args) {
