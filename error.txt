@@ -1,0 +1,2 @@
+Error: Could not find or load main class LeerNoombre.java
+Caused by: java.lang.ClassNotFoundException: LeerNoombre.java
